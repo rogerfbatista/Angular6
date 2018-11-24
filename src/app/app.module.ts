@@ -1,22 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+
 import { MeuTableComponent } from './Components/meu-table/meu-table.component';
 import { HeadBarComponent } from './Components/Shared/head-bar/head-bar.component';
+import { HomePageComponent } from './Pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    
     MeuTableComponent,
-    HeadBarComponent
+    HeadBarComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [HomePageComponent]
 })
 export class AppModule { }
