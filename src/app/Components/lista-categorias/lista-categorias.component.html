@@ -1,0 +1,25 @@
+<p>
+  lista-categorias works!
+</p>
+<ul>
+  <li *ngFor="let c of listaCategoria">{{ c.titulo }}</li>
+</ul>
+
+
+<div class="container-fluid">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+           <th class="text-center">Título</th>
+          <th class="text-center">Detalhes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of listaCategoria">
+          <td class="text-center">{{ c.titulo }}</td>
+          <td><a routerLink="/Categoria/detalhes/{{ c.id }}">{{ c.titulo }}</a></td>
+         
+        </tr>
+      </tbody>
+    </table>
+</div>
