@@ -24,7 +24,16 @@ export class ListaCategoriasComponent implements OnInit {
 
     ObterCategoria():void
     {
-      this.service.ObterCategorias().subscribe(data=> this.listaCategoria =data,error=> console.error(error));
-  }
+      this.service.ObterCategorias().subscribe(data=> this.listaCategoria =data,
+        error=>  this.ObterError(error))
+        
+      }
+
+      private ObterError(e:any) {
+       
+        this.erroMensagem = e;
+        console.log(e);
+      }
+   
 
 }
